@@ -60,3 +60,11 @@ console.log('Setter Getter');
 console.log(dog1.age);
 dog1.age = 8;
 console.log(dog1.age);
+
+
+// subClass
+let Dog = function () {
+  // 初始化父类的构造函数,call的作用：改变this的指针
+  Animal.call(this, 'dog');
+}
+Dog.prototype = Animal.prototype;
